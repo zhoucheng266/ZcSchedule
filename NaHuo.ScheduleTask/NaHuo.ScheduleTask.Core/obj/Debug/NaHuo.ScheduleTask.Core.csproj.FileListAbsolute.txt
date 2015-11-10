@@ -1,0 +1,10 @@
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\NaHuo.ScheduleTask.Core.dll.config
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\NaHuo.ScheduleTask.Core.dll
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\NaHuo.ScheduleTask.Core.pdb
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\EntityFramework.dll
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\EntityFramework.xml
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\obj\Debug\NaHuo.ScheduleTask.Core.dll
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\obj\Debug\NaHuo.ScheduleTask.Core.pdb
+C:\Users\诚\Documents\Visual Studio 2013\Projects\NaHuo.ScheduleTask\NaHuo.ScheduleTask.Core\obj\Debug\NaHuo.ScheduleTask.Core.csprojResolveAssemblyReference.cache

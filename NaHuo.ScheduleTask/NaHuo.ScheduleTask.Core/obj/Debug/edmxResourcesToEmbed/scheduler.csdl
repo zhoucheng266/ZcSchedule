@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nahuo_schedulerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="nahuo_schedulerEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Config" EntityType="nahuo_schedulerModel.Config" />
+    <EntitySet Name="ConfigStatus" EntityType="nahuo_schedulerModel.ConfigStatus" />
+  </EntityContainer>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="jobname" />
+    </Key>
+    <Property Name="jobname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="statusid" Type="Int32" />
+    <Property Name="groupname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="starttime" Type="DateTime" Precision="3" />
+    <Property Name="endtime" Type="DateTime" Precision="3" />
+    <Property Name="isrepeat" Type="Boolean" Nullable="false" />
+    <Property Name="repeatcoount" Type="Int32" />
+    <Property Name="interval" Type="Int32" />
+    <Property Name="cronschedule" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="assemblyname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="namespace" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ConfigStatus">
+    <Key>
+      <PropertyRef Name="statusid" />
+    </Key>
+    <Property Name="statusid" Type="Int32" Nullable="false" />
+    <Property Name="statusname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

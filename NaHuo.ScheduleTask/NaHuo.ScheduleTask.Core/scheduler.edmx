@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="nahuo_schedulerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="nahuo_schedulerModelStoreContainer">
+          <EntitySet Name="Config" EntityType="nahuo_schedulerModel.Store.Config" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ConfigStatus" EntityType="nahuo_schedulerModel.Store.ConfigStatus" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="jobname" />
+          </Key>
+          <Property Name="jobname" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="statusid" Type="int" />
+          <Property Name="groupname" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="starttime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+          <Property Name="isrepeat" Type="bit" Nullable="false" />
+          <Property Name="repeatcoount" Type="int" />
+          <Property Name="interval" Type="int" />
+          <Property Name="cronschedule" Type="varchar" MaxLength="1000" />
+          <Property Name="assemblyname" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="namespace" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ConfigStatus">
+          <Key>
+            <PropertyRef Name="statusid" />
+          </Key>
+          <Property Name="statusid" Type="int" Nullable="false" />
+          <Property Name="statusname" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nahuo_schedulerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="nahuo_schedulerEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Config" EntityType="nahuo_schedulerModel.Config" />
+          <EntitySet Name="ConfigStatus" EntityType="nahuo_schedulerModel.ConfigStatus" />
+        </EntityContainer>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="jobname" />
+          </Key>
+          <Property Name="jobname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="statusid" Type="Int32" />
+          <Property Name="groupname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="starttime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="isrepeat" Type="Boolean" Nullable="false" />
+          <Property Name="repeatcoount" Type="Int32" />
+          <Property Name="interval" Type="Int32" />
+          <Property Name="cronschedule" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="assemblyname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="namespace" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ConfigStatus">
+          <Key>
+            <PropertyRef Name="statusid" />
+          </Key>
+          <Property Name="statusid" Type="Int32" Nullable="false" />
+          <Property Name="statusname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nahuo_schedulerModelStoreContainer" CdmEntityContainer="nahuo_schedulerEntities">
+          <EntitySetMapping Name="Config">
+            <EntityTypeMapping TypeName="nahuo_schedulerModel.Config">
+              <MappingFragment StoreEntitySet="Config">
+                <ScalarProperty Name="jobname" ColumnName="jobname" />
+                <ScalarProperty Name="statusid" ColumnName="statusid" />
+                <ScalarProperty Name="groupname" ColumnName="groupname" />
+                <ScalarProperty Name="starttime" ColumnName="starttime" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="isrepeat" ColumnName="isrepeat" />
+                <ScalarProperty Name="repeatcoount" ColumnName="repeatcoount" />
+                <ScalarProperty Name="interval" ColumnName="interval" />
+                <ScalarProperty Name="cronschedule" ColumnName="cronschedule" />
+                <ScalarProperty Name="assemblyname" ColumnName="assemblyname" />
+                <ScalarProperty Name="namespace" ColumnName="namespace" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConfigStatus">
+            <EntityTypeMapping TypeName="nahuo_schedulerModel.ConfigStatus">
+              <MappingFragment StoreEntitySet="ConfigStatus">
+                <ScalarProperty Name="statusid" ColumnName="statusid" />
+                <ScalarProperty Name="statusname" ColumnName="statusname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

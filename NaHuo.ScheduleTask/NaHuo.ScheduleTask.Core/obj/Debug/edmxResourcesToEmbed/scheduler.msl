@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nahuo_schedulerModelStoreContainer" CdmEntityContainer="nahuo_schedulerEntities">
+    <EntitySetMapping Name="Config">
+      <EntityTypeMapping TypeName="nahuo_schedulerModel.Config">
+        <MappingFragment StoreEntitySet="Config">
+          <ScalarProperty Name="jobname" ColumnName="jobname" />
+          <ScalarProperty Name="statusid" ColumnName="statusid" />
+          <ScalarProperty Name="groupname" ColumnName="groupname" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="isrepeat" ColumnName="isrepeat" />
+          <ScalarProperty Name="repeatcoount" ColumnName="repeatcoount" />
+          <ScalarProperty Name="interval" ColumnName="interval" />
+          <ScalarProperty Name="cronschedule" ColumnName="cronschedule" />
+          <ScalarProperty Name="assemblyname" ColumnName="assemblyname" />
+          <ScalarProperty Name="namespace" ColumnName="namespace" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigStatus">
+      <EntityTypeMapping TypeName="nahuo_schedulerModel.ConfigStatus">
+        <MappingFragment StoreEntitySet="ConfigStatus">
+          <ScalarProperty Name="statusid" ColumnName="statusid" />
+          <ScalarProperty Name="statusname" ColumnName="statusname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

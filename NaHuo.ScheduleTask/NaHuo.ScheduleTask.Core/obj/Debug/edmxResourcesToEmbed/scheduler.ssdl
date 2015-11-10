@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nahuo_schedulerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="nahuo_schedulerModelStoreContainer">
+    <EntitySet Name="Config" EntityType="nahuo_schedulerModel.Store.Config" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConfigStatus" EntityType="nahuo_schedulerModel.Store.ConfigStatus" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="jobname" />
+    </Key>
+    <Property Name="jobname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="statusid" Type="int" />
+    <Property Name="groupname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="starttime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
+    <Property Name="isrepeat" Type="bit" Nullable="false" />
+    <Property Name="repeatcoount" Type="int" />
+    <Property Name="interval" Type="int" />
+    <Property Name="cronschedule" Type="varchar" MaxLength="1000" />
+    <Property Name="assemblyname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="namespace" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ConfigStatus">
+    <Key>
+      <PropertyRef Name="statusid" />
+    </Key>
+    <Property Name="statusid" Type="int" Nullable="false" />
+    <Property Name="statusname" Type="varchar" MaxLength="100" />
+  </EntityType>
+</Schema>
