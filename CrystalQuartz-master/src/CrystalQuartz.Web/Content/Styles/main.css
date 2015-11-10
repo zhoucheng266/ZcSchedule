@@ -1,0 +1,553 @@
+﻿/*
+ * Common
+ */
+
+.cq-date .cq-none {
+    color: #CCCCCC;
+}
+
+.cq-button {
+    color: #666666;
+
+    display: block;
+    background-color: #ffffff;
+    
+    border: 1px solid #d9d9d9;
+
+    padding: 7px;
+
+    border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-webkit-border-radius: 2px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+}
+
+.cq-button .cq-icon {
+    font-size: 14px;
+    margin: 0 5px;
+    float: left;
+}
+
+.cq-button:hover {
+    text-decoration: none;
+    border-color: #bbbbbb;
+    color: #666666;
+}
+
+.cq-button:active {
+    background: #d9d9d9;
+    color: #262626;
+}
+
+.cq-button.disabled,
+.cq-button.disabled:hover {
+    background: #e9e9e9;
+}
+
+/* Scheduler status */
+
+.cq-scheduler-status {
+    
+}
+
+.empty,
+.ready,
+.started,
+.shutdown
+{
+	float:left;
+	height:10px;
+	width:10px;
+    margin-top: 18px;
+
+    transition: background 1s;
+
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-webkit-border-radius:50%;
+}
+
+.empty 
+{
+	background: #ffffff;
+}
+
+.ready 
+{
+	background: #E5D45B;
+}
+
+.started 
+{
+	background: #38C049;
+}
+
+.shutdown
+{
+	background: #ffffff;
+}
+
+/* Activity status */
+
+.cq-activity-status {
+    float:left;
+    margin-right: 5px;
+}
+
+.cq-activity-status .cq-activity-status-primary,
+.cq-activity-status .cq-activity-status-secondary {
+    float:left;
+	height:10px;
+	width:10px;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+    transition: background 1s, width 1s, border-radius 1s;
+}
+
+.cq-activity-status .cq-activity-status-secondary {
+    width: 0;
+}
+
+.cq-activity-status.active .cq-activity-status-primary {
+    background: #38C049;
+}
+
+.cq-activity-status.paused .cq-activity-status-primary {
+    background: #E5D45B;
+}
+
+.cq-activity-status.complete .cq-activity-status-primary {
+    background: #CCCCCC;
+}
+
+.cq-activity-status.mixed .cq-activity-status-secondary {
+    display: block;
+}
+
+.cq-activity-status.mixed .cq-activity-status-primary {
+    width: 5px;
+    background: #38C049;
+
+    border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-ms-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+}
+
+.cq-activity-status.mixed .cq-activity-status-secondary {
+    width: 5px;
+    background: #E5D45B;
+
+    border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-ms-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+}
+
+/* Activity Action Buttons */
+
+.actions {
+    float: right;
+    padding: 5px 10px;
+}
+
+td .actions {
+    padding: 0;
+}
+
+.actions .cq-button {
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    padding: 3px 5px;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.actions .cq-button:hover {
+    padding: 2px 4px;
+    border: 1px solid #d9d9d9;
+    background: #FFFFFF;
+
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    text-decoration: none;
+}
+
+.actions .cq-button.disabled, 
+.actions .cq-button.disabled:hover {
+    background: transparent;
+    border: none;
+    color: #CCCCCC;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 3px 5px;
+    text-decoration: none;
+}
+
+.cq-job-group-header .actions {
+	margin-top: 3px;
+}
+
+.cq-job-group-header .actions .cq-button {
+    color: #FFFFFF;
+}
+
+.cq-job-group-header .actions .cq-button:hover {
+    color: #FFFFFF;
+	background: #444444;
+}
+
+/* Data values */
+
+span.string
+{
+	color: #A31515;
+}
+
+span.boolean
+{
+	color: #0000FF;
+}
+
+span.runtimetype
+{
+	background: url("CrystalQuartzPanel.axd?path=Images.type.png") no-repeat scroll 0 0 #FFFFFF;
+	color: #2B91AF;
+	height: 40px;
+	padding-bottom: 2px;
+	padding-left: 20px;
+	padding-top: 2px;
+}
+
+/*
+ * Main Header
+ */
+
+.cq-main-header {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #666666;
+    color: #FFFFFF;
+}
+
+.cq-main-header-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #333333;
+}
+
+.cq-header-item
+{
+    height: 48px;
+}
+
+.cq-scheduler-name {
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 48px;
+}
+
+.cq-main-header .cq-leave-link {
+    float: right;
+    color: #EEEEEE;
+    line-height: 48px;
+}
+
+.cq-scheduler-properties {
+    background: #f8f8f8;
+    padding: 20px 0 0;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.cq-info-table {
+    border-left: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    background: #e9e9e9;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cq-info-table thead tr th {
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background: #e9e9e9;
+}
+
+.cq-info-table th {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    background: #f8f8f8;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.cq-info-table tr td {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    padding: 3px 10px;
+    font-size: 12px;
+    background: #FFFFFF;
+}
+
+/*
+ * Main Header -> Busy Indicator
+ */
+
+.cq-busy {
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.cq-busy-image,
+.cq-current-command {
+    text-align: center;
+}
+
+/*
+ * Main Container
+ */
+
+.cq-main-content {
+    position: absolute;
+    top: 50px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+/*
+ * Job Group
+ */
+
+.cq-job-group-header {
+    background: #666666;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.cq-job-group-header-title {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+.cq-job-group-header .cq-activity-status {
+    margin-top: 12px;    
+}
+
+/*
+ * Job 
+ */
+
+.cq-job {
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    margin-bottom: 15px;
+}
+
+.cq-job-header {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    background: #e9e9e9;
+    padding-left: 10px;
+}
+
+.cq-job-header .cq-activity-status {
+    margin-top: 10px;    
+}
+
+.cq-job-header-title,
+.cq-job-hide-details {
+	line-height: 32px;
+}
+
+.cq-job-header-title {
+    font-size: 18px;
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    color: #666666;
+	float: left;
+}
+
+.cq-job-header-title:hover {
+    color: #666666;
+}
+
+.cq-job-hide-details {
+	float: left;
+	margin-left: 5px;
+	color: #cccccc;	
+}
+
+.cq-job-hide-details:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+/*
+ * Job Details
+ */
+
+.cq-job-details {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+
+.cq-job-details-panel {
+    margin: 10px;
+}
+
+.cq-job-details-panel-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 10px 0;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 0;
+}
+
+.cq-job-details-panel TABLE {
+    width: 100%;
+    font-size: 12px;
+}
+
+.cq-job-details-panel TABLE TR TH,
+.cq-job-details-panel TABLE TR TD {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 3px;
+    text-align: left;
+}
+
+.cq-job-details-panel TABLE THEAD TR TH,
+.cq-job-details-panel TABLE THEAD TR TD {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+/*
+ * Trigger data table
+ */
+
+.cq-triggers {
+    width: 100%;
+}
+
+.cq-triggers thead th {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    
+    background: #f8f8f8;
+    
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    text-align: left;
+}
+
+.cq-triggers tbody tr td {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.cq-triggers .cq-activity-status {
+    margin-top: 4px;    
+}
+
+/*
+ * Main footer
+ */
+
+.cq-main-footer {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cq-main-footer .cq-footer-wrapper {
+    border-top: 1px solid #CCCCCC;
+    padding-top: 5px;
+    color: #666666;
+    font-size: 12px;
+}
+
+.cq-main-footer .cq-version {
+	font-weight: bold;
+}
+
+.cq-version-container {
+	float: left;
+	margin-right: 20px;
+}
+
+/*
+ * Error Popup
+ */
+
+.cq-error-dialog {
+	position: absolute;
+    top: 50px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+	z-index: 1000;
+	background: #ffffff;
+	background: rgba(256, 256, 256, 0.5);
+}
+
+.cq-error-dialog-body {
+	margin: 40px 20px 0 20px;
+	border: 1px solid #666666;
+	box-shadow: 1px 1px 2px #CCCCCC;
+	background: #FFFFFF;
+}
+
+.cq-error-message {
+	border-bottom: 1px solid #666666;
+	padding: 20px;
+	color: #cb4437;
+	font-size: 20px;
+}
+
+.cq-error-dialog-toolbar {
+	padding: 10px 20px;
+	background: #f8f8f8;
+}
+
+.cq-error-dialog-toolbar .cq-button {
+	margin: 0;
+}
